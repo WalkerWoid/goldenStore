@@ -1,0 +1,265 @@
+@import "variables"
+.sale
+  margin-top: 120px
+
+.sale__header
+  font-family: 'Prata'
+  font-weight: 400
+  font-size: 40px
+  color: $mainColor
+
+.sale__categories
+  margin-top: 24px
+  display: flex
+  justify-content: space-between
+  align-items: center
+.sale__category
+  display: inline-block
+  margin-right: 8px
+  padding: 13px 30px
+  font-weight: 400
+  font-size: 14px
+  color: $mainColor
+  border-radius: 21px
+  background-color: #F0F0F0
+  &:hover
+    background-color: #DDDDDD
+  &:last-of-type
+    margin-right: 0
+  &.active
+    color: white
+    background: $mainColor
+    &:hover
+      color: white
+      background: $mainColor
+
+.sale__arrows
+  display: flex
+  span:first-child
+    margin-right: 8px
+
+.sale__container
+  display: grid
+  grid-column-gap: 20px
+  grid-row-gap: 20px
+  &_sale
+    grid-template-columns: repeat(4, 1fr)
+    margin-top: 35px
+  &_discount
+    grid-template-columns: repeat(3, 1fr)
+    margin-top: 120px
+
+.sale__block
+  border: 1px solid #F0F0F0
+  padding: 40px 25px 25px
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+.sale__icons
+  position: absolute
+  top: 15px
+  right: 25px
+  left: 25px
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  &_noSale
+    justify-content: flex-end
+  a
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      width: 20px
+      height: 18px
+      opacity: .5
+      &:hover
+        opacity: 1
+  .clicked
+    img
+      opacity: 1
+
+.eye__icon
+  margin-top: 15px
+.sale__icon
+  background: #5B8A8F
+  border-radius: 15px
+  font-weight: 500
+  font-size: 13px
+  color: #FFFFFF
+  padding: 4px 10px
+
+.sale__img_container
+  position: relative
+  img
+    width: 200px
+    height: 200px
+
+
+.sale__price
+  margin-top: 26px
+  max-width: 100%
+  width: 100%
+  display: flex
+  justify-content: space-between
+  &_new
+    font-weight: 600
+    font-size: 18px
+    color: $mainColor
+    margin-right: 8px
+    align-self: flex-end
+  &_old
+    font-weight: 400
+    font-size: 14px
+    color: #8F8F8F
+    text-decoration: line-through
+    align-self: flex-end
+  &_discount
+    font-weight: 500
+    font-size: 13px
+    color: #FFFFFF
+    background: #E24B33
+    border-radius: 15px
+    padding: 4px 8px
+  &_flex
+    display: flex
+.sale__description
+  font-weight: 400
+  font-size: 14px
+  line-height: 160%
+  color: $mainColor
+  margin-top: 16px
+  max-width: 100%
+  width: 100%
+
+
+.discount__block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: #F8F8F8
+  padding-left: 24px
+  overflow: hidden
+  position: relative
+.discount__text
+  font-weight: 600
+  font-size: 18px
+  line-height: 160%
+  text-transform: uppercase
+  color: $mainColor
+.discount__discount
+  font-weight: 600
+  font-size: 24px
+  line-height: 160%
+  color: #FFFFFF
+  margin-top: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 0px 10px
+  margin-left: -24px
+  width: 195px
+  &_green
+    background-color: #43807F
+  &_orange
+    background-color: #E24B33
+  &_yellow
+    background-color: #E1A661
+  span
+    font-weight: 600
+    font-size: 36px
+    line-height: 160%
+    color: #FFFFFF
+    margin-left: 13px
+.discount__zIndex
+  z-index: 3
+.discount__brilliant
+  position: absolute
+  height: 350px
+  width: auto
+  right: 112px
+  top: 25px
+  z-index: 0
+.discount__img
+  z-index: 1
+
+@media screen and (max-width: 1280px)
+  .sale
+    margin-top: 60px
+    &__container
+      grid-column-gap: 10px
+      grid-row-gap: 10px
+      &_discount
+        margin-top: 60px
+    &__block
+      padding: 45px 15px 15px
+    &__img_container
+      max-width: 180px
+      width: 100%
+      img
+        max-width: 100%
+        width: 100%
+        height: auto
+        z-index: 1
+    &__icons
+      z-index: 2
+
+@media screen and (max-width: 980px)
+  .sale
+    margin-top: 40px
+    &__categories
+      margin-top: 40px
+    &__container
+      margin-top: 40px
+      grid-column-gap: 20px
+      grid-row-gap: 20px
+      grid-template-columns: 1fr 1fr
+      &_discount
+        margin-top: 40px
+        grid-template-columns: 1fr
+    &__img_container
+      max-width: 200px
+      width: 100%
+  .discount__brilliant
+    left: 0
+@media screen and (max-width: 640px)
+  .sale
+    margin-top: 20px
+    &__header
+      font-size: 25px
+    &__categories
+      margin-top: 0px
+      flex-wrap: wrap
+      nav
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 100%
+        a
+          margin: 20px 0 0 0
+          width: calc(50% - 20px*1/2)
+          padding: 10px
+          display: block
+          text-align: center
+    &__arrows
+      margin-top: 20px
+      justify-content: space-between
+      width: 100%
+    &__container
+      margin-top: 20px
+      grid-template-columns: 1fr
+      &_discount
+        margin-top: 20px
+  .discount
+    &__discount
+      width: 150px
+      font-size: 20px
+    &__block
+      height: 280px
+    &__img
+      max-width: 150px
+      align-self: flex-end
+    &__brilliant
+      width: 350px
+      height: auto

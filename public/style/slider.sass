@@ -1,0 +1,182 @@
+@import "variables"
+/*Слайдер*/
+.slider
+  margin-top: 20px
+  height: 560px
+  background-color: #F8F8F8
+  display: flex
+  overflow: hidden
+  &__line
+    position: relative
+.slide
+  max-width: 100%
+  width: 100%
+  height: 100%
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 36px 0 130px
+  &__brilliant
+    position: absolute
+    left: 0
+    top: 25px
+    width: auto
+    height: auto
+    z-index: 0
+  &__left
+    z-index: 1
+  &__text_lil
+    font-family: 'Prata'
+    font-weight: 400
+    font-size: 20px
+    color: $mainColor
+  &__text_big
+    margin-top: 30px
+    font-family: 'Prata'
+    font-weight: 400
+    font-size: 50px
+    color: $mainColor
+  &__button
+    margin-top: 54px
+    font-family: 'Inter'
+    font-weight: 500
+    font-size: 14px
+    text-transform: uppercase
+    color: #FFFFFF
+    background: $mainColor
+    padding: 20px 56px
+    cursor: pointer
+    display: inline-block
+  &__imgContainer
+    max-width: 550px
+    img
+      max-width: 100%
+      width: 100%
+      margin-left: 10px
+.slider__nav
+  position: absolute
+  width: 100%
+  display: flex
+  justify-content: space-between
+  top: calc(50% - 27px)
+  padding: 0 25px
+  img
+    width: 16px
+    height: auto
+  span
+    display: flex
+
+/* Карусель */
+.owl-nav
+  max-width: 100%
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding: 0 25px
+  z-index: 0
+  bottom: 25px
+  button
+    position: absolute
+    bottom: calc(50% - 27px)
+    width: 54px
+    height: 54px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    border: 1px solid $mainColor
+    &:hover
+      background-color: #F5F5F5
+  .owl-prev
+    left: 25px
+  .owl-next
+    right: 25px
+.owl-next
+  img
+    transform: rotate(180deg)
+  &.pressed
+    img
+      transform: translateX(5px) rotate(180deg)
+.owl-prev.pressed
+  img
+    transform: translateX(-5px)
+
+.owl-dots
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  max-width: 100%
+  width: 100%
+  bottom: 25px
+  button
+    cursor: pointer
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    border: 1px solid $mainColor
+    margin-right: 8px
+  .active
+    background-color: $mainColor
+
+@media screen and (max-width: 1280px)
+  .slider
+    height: auto
+  .slide
+    padding: 0 0 0 90px
+    &__imgContainer
+      max-width: 460px
+    &__brilliant
+      max-width: 600px
+      bottom: 0
+    &__text
+      &_big
+        font-size: 40px
+
+@media screen and (max-width: 980px)
+  .slide
+    flex-wrap: wrap
+    padding: 0 20px 60px
+    justify-content: center
+    &__imgContainer
+      order: 1
+      max-width: 400px
+      img
+        margin-left: 0
+    &__text
+      &_big
+        font-size: 35px
+        margin-top: 20px
+    &__button
+      margin-top: 20px
+    &__left
+      max-width: 100%
+      width: 100%
+      order: 2
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__brilliant
+      display: none
+
+@media screen and (max-width: 640px)
+  .slide
+    &__imgContainer
+      max-width: 320px
+    &__text
+      &_big
+        font-size: 26px
+        margin-top: 10px
+    &__button
+      margin-top: 10px
+  .owl-nav
+    button
+      top: 20px
+      width: 40px
+      height: 40px
+    .owl-next
+      right: 10px
+    .owl-prev
+      left: 10px

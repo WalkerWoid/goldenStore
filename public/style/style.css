@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/*roboto*/
+/*inter*/
+/*prata*/
+@import "header.css";
+@import "main.css";
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/static/Inter-Regular.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Prata";
+  src: url("../fonts/Prata/Prata-Regular.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fonts/Roboto_Condensed/RobotoCondensed-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  font-family: "Inter";
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.overflow_hidden {
+  overflow: hidden;
+}
+
+.main {
+  padding-bottom: 25px;
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.slide__next, .slide__prev {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #303030;
+}
+.slide__next:hover, .slide__prev:hover {
+  background-color: #F5F5F5;
+}
+
+.slide__next img {
+  transform: rotate(180deg);
+}
+
+.slide__next.pressed img {
+  transform: translateX(5px) rotate(180deg);
+}
+
+.slide__prev.pressed img {
+  transform: translateX(-5px);
+}
+
+.slider__dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+}
+.slider__dots_slider {
+  bottom: 25px;
+}
+.slider__dots_sale {
+  bottom: 6px;
+}
+
+.slider__dot {
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #303030;
+  margin-right: 8px;
+}
+.slider__dot_active {
+  background-color: #303030;
+}
+.slider__dot:last-of-type {
+  margin-right: 0;
+}
+
+.bubble {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+.bubble_new {
+  background-color: #495159;
+}
+.bubble_hit {
+  background-color: #E1A661;
+}
+.bubble_sale {
+  background-color: #5B8A8F;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Стили для header*/
+/*Стили для main*/
+
+/*# sourceMappingURL=style.css.map */

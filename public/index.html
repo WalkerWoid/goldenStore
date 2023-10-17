@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shop</title>
+
+    <link rel="stylesheet" href="scripts/owlCarousel/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<header class="header container">
+    <div class="header__top">
+        <div class="header__info">
+            <div class="header__city">
+                <img src="images/icons/city.svg" alt="cityIcon" class="header__info_img">
+
+                <div class="user-city">
+                    <p class="selectedCity" data-selectedId="1">Санкт-Петербург</p>
+
+                    <div class="other-cities hidden">
+                        <p class="avalCity city__choosen" data-id="1">Санкт-Петербург</p>
+                        <p class="avalCity" data-id="2">Москва</p>
+                        <p class="avalCity" data-id="3">Нижний новгород</p>
+                        <p class="avalCity" data-id="4">Ростов-на-дону</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__phone">
+                <img src="images/icons/phone.svg" alt="phoneIcon" class="header__info_img">
+                8 800 785-25-25
+            </div>
+        </div>
+
+        <div class="header__logo">
+            <a href="#" class="flex">
+                <img src="images/header/logo.png" alt="logo" class="logo">
+            </a>
+            <span class="header__logo_text">ювелирный магазин</span>
+        </div>
+
+        <span class="header__auth_burg">Вход</span>
+        <div class="header__auth header__auth_hidden">
+            <div class="auth">
+                <a href="#" class="auth__entry">Вход</a>
+                <a href="#" class="auth__registration">Регистрация</a>
+            </div>
+
+            <div class="header__icons">
+                <span class="header__hearts">
+                    <a href="#" class="flex clicked_item">
+                        <img src="images/icons/headerHeart.svg" alt="heartIcon"
+                             class="header__icon_heart" data-img="headerHeart">
+                    </a>
+
+                    <span>23</span>
+                </span>
+
+                <a href="#" class="flex">
+                    <img src="images/icons/headerStat.svg" alt="statIcon" class="header__icon_stat">
+                </a>
+
+                <a href="#" class="flex">
+                    <img src="images/icons/headerCart.svg" alt="cartIcon" class="header__icon_cart">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header__bottom">
+        <span class="header__nav_burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+
+        <nav class="header__nav hidden">
+            <ul>
+                <li><a href="#" class="header__nav_a active">Каталог</a></li>
+                <li><a href="#" class="header__nav_a">Акции</a></li>
+                <li><a href="#" class="header__nav_a">Бренды</a></li>
+                <li><a href="#" class="header__nav_a">Магазины</a></li>
+                <li><a href="#" class="header__nav_a">О нас</a></li>
+                <li><a href="#" class="header__nav_a">Доставка и оплата</a></li>
+            </ul>
+        </nav>
+
+        <img src="images/icons/search.svg" alt="searchIcon" class="loop_open">
+        <form class="search__form hidden">
+            <button type="button">
+                <img src="images/icons/search.svg" alt="searchIcon" class="search__img">
+            </button>
+
+            <input type="search" placeholder="Поиск по сайту">
+        </form>
+    </div>
+</header>
+
+<main class="container main">
+    <section class="slider">
+        <div class="slider__line owl-carousel">
+            <div class="slide">
+                <img src="images/slider/brilliant.svg" alt="brilliant" class="slide__brilliant">
+                <div class="slide__left">
+                    <p class="slide__text_lil">Суперскидка до 60%</p>
+                    <p class="slide__text_big">НА БРИЛЛИАНТЫ</p>
+                    <a href="#" class="slide__button">Подробнее</a>
+                </div>
+                <div class="slide__imgContainer">
+                    <img src="images/slider/sliderImg.png" alt="ring" class="slide__img">
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/slider/brilliant.svg" alt="brilliant" class="slide__brilliant">
+                <div class="slide__left">
+                    <p class="slide__text_lil">Суперскидка до 60%</p>
+                    <p class="slide__text_big">НА БРИЛЛИАНТЫ</p>
+                    <a href="#" class="slide__button">Подробнее</a>
+                </div>
+                <div class="slide__imgContainer">
+                    <img src="images/slider/sliderImg.png" alt="ring" class="slide__img">
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/slider/brilliant.svg" alt="brilliant" class="slide__brilliant">
+                <div class="slide__left">
+                    <p class="slide__text_lil">Суперскидка до 60%</p>
+                    <p class="slide__text_big">НА БРИЛЛИАНТЫ</p>
+                    <a href="#" class="slide__button">Подробнее</a>
+                </div>
+                <div class="slide__imgContainer">
+                    <img src="images/slider/sliderImg.png" alt="ring" class="slide__img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2 class="category__header">Популярные категории</h2>
+
+        <div class="categories__container"></div>
+    </section>
+
+    <section class="sale">
+        <h2 class="sale__header">Распродажа</h2>
+
+        <div class="sale__categories">
+            <nav>
+                <a href="#" class="sale__category active">Кольца</a>
+                <a href="#" class="sale__category">Серьги</a>
+                <a href="#" class="sale__category">Браслеты</a>
+                <a href="#" class="sale__category">Часы</a>
+            </nav>
+
+            <div class="sale__arrows">
+                <span class="slide__prev disabled press">
+                    <img src="images/arrow.svg" alt="arrow">
+                </span>
+                <span class="slide__next press">
+                    <img src="images/arrow.svg" alt="arrow">
+                </span>
+            </div>
+        </div>
+
+        <div class="sale__container sale__container_sale"></div>
+
+        <div class="sale__container sale__container_discount">
+            <div class="discount__block">
+                <div class="discount__zIndex">
+                    <p class="discount__text">Скидки на все украшения с бриллиантами</p>
+                    <p class="discount__discount discount__discount_green">
+                        До <span>-50%</span>
+                    </p>
+                </div>
+                <img src="images/slider/brilliant.svg" alt="brilliant" class="discount__brilliant">
+                <img src="images/sale/jewelry1.png" alt="jewelry" class="discount__img">
+            </div>
+
+            <div class="discount__block">
+                <div class="discount__zIndex">
+                    <p class="discount__text">Скидки на кольца и браслеты</p>
+                    <p class="discount__discount discount__discount_orange">
+                        До <span>-40%</span>
+                    </p>
+                </div>
+                <img src="images/slider/brilliant.svg" alt="brilliant" class="discount__brilliant">
+                <img src="images/sale/jewelry2.png" alt="jewelry" class="discount__img">
+            </div>
+
+            <div class="discount__block">
+                <div class="discount__zIndex">
+                    <p class="discount__text">снижение цен  на обручальные кольца</p>
+                    <p class="discount__discount discount__discount_yellow">
+                        До <span>-60%</span>
+                    </p>
+                </div>
+                <img src="images/slider/brilliant.svg" alt="brilliant" class="discount__brilliant">
+                <img src="images/sale/jewelry3.png" alt="jewelry" class="discount__img">
+            </div>
+        </div>
+    </section>
+
+    <section class="daily">
+        <div class="daily__header">
+            <h2>Товар дня</h2>
+
+            <div class="daily__arrows">
+                <div class="sale__arrows">
+                    <span class="slide__prev press">
+                        <img src="images/arrow.svg" alt="arrow">
+                    </span>
+                    <span class="slide__next press">
+                        <img src="images/arrow.svg" alt="arrow">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="daily__bottom">
+            <div class="daily__left">
+                <div class="daily__icons">
+                    <span class="bubble bubble_new">New</span>
+                    <span class="bubble bubble_hit">Хит</span>
+                    <span class="bubble bubble_sale">Sale</span>
+                </div>
+
+                <img src="images/daily/ring.png" alt="ring" class="daily__img">
+
+                <div class="daily__nav_wrapper">
+                    <span class="daily__nav daily__nav_prev"></span>
+                    <span class="daily__nav daily__nav_next"></span>
+                </div>
+            </div>
+
+            <div class="daily__right">
+                <div class="daily__stars">
+                    <img src="images/icons/star_full.svg" alt="star_full" class="daily__star">
+                    <img src="images/icons/star_full.svg" alt="star_full" class="daily__star">
+                    <img src="images/icons/star_full.svg" alt="star_full" class="daily__star">
+                    <img src="images/icons/star_full.svg" alt="star_full" class="daily__star">
+                    <img src="images/icons/star_empty.svg" alt="star_empty" class="daily__star">
+
+                    <span class="daily__grade">4,2</span>
+                </div>
+
+                <div class="daily__name">
+                    Кольцо из золота с бриллиантами
+                </div>
+
+                <div class="daily__article">
+                    Артикул: 1012076
+                </div>
+
+                <div class="daily__info">
+                    <div class="daily__price">
+                        <span class="daily__price_new">22 000 ₽</span>
+                        <span class="daily__price_old">22 000 ₽</span>
+                        <span class="daily__price_disc">-45%</span>
+                    </div>
+
+                    <div class="daily__timer countdown"></div>
+                </div>
+
+                <div class="daily__color">
+                    <span class="daily__color_text">цвет</span>
+
+                    <div class="daily__color_container">
+                        <span class="daily__color_unit daily__color_gray"></span>
+                        <span class="daily__color_unit daily__color_gold active"></span>
+                        <span class="daily__color_unit daily__color_orange"></span>
+                        <span class="daily__color_unit daily__color_green disabled"></span>
+                    </div>
+                </div>
+
+                <div class="daily__size">
+                    <span class="daily__size_text">размер</span>
+                    <p class="daily__question">
+                        <span class="daily__question_span">?</span>
+
+                        <span class="daily__question_text">
+                            Также как существующая теория напрямую зависит от экономической целесообразности принимаемых
+                            решений.
+                        </span>
+                    </p>
+
+                    <div class="daily__size_container">
+                        <span class="daily__size_span active">16,5</span>
+                        <span class="daily__size_span">17,5</span>
+                        <span class="daily__size_span">18,5</span>
+                        <span class="daily__size_span">19</span>
+                        <span class="daily__size_span">19,5</span>
+                        <span class="daily__size_span">19,5</span>
+                        <span class="daily__size_span">18,5</span>
+                        <span class="daily__size_span">19</span>
+                        <span class="daily__size_span disabled">19,5</span>
+                        <span class="daily__size_span disabled">19,5</span>
+                    </div>
+                </div>
+
+                <div class="daily__buttons_container">
+                    <div class="daily__buttons">
+                        <button type="button" class="daily__button daily__button_toCart press">В корзину</button>
+                        <button type="button" class="daily__button daily__button_buy press">Купить в 1 клик</button>
+                    </div>
+
+                    <div class="daily__icons_right">
+                        <div class="daily__icon">
+                            <a href="#" class="clicked_item">
+                                <img src="images/icons/heartIcon.svg" alt="heartIcon"
+                                     class="daily__icon_img" data-img="heartIcon">
+                                <span class="daily__icon_text">Сохранить</span>
+                            </a>
+                        </div>
+
+                        <div class="daily__icon">
+                            <a href="#">
+                                <img src="images/icons/compare.svg" alt="statIcon" class="daily__icon_img daily__icon_stat">
+                                <span class="daily__icon_text">Сравнить</span>
+                            </a>
+                        </div>
+
+                        <div class="daily__icon">
+                            <a href="#">
+                                <img src="images/icons/share.svg" alt="shareIcon" class="daily__icon_img">
+                                <span class="daily__icon_text">Поделиться</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="articles">
+        <div class="articles__top">
+            <h2 class="articles__header">Статьи</h2>
+
+            <a href="#" class="articles__readAll">
+                Читать все
+                <span class="articles__arrow"></span>
+            </a>
+        </div>
+
+        <div class="articles__container">
+            <a href="#" class="article">
+                <img src="images/articles/article1.png" alt="articleImg" class="article__img">
+                <span class="article__data">21 сентября 2021</span>
+                <h3 class="article__header">Обручальные кольца: тренды 2021</h3>
+            </a>
+
+            <a href="#" class="article">
+                <img src="images/articles/article2.png" alt="articleImg" class="article__img">
+                <span class="article__data">25 сентября 2021</span>
+                <h3 class="article__header">Главные ювелирные тренды года</h3>
+            </a>
+
+            <a href="#" class="article">
+                <img src="images/articles/article3.png" alt="articleImg" class="article__img">
+                <span class="article__data">21 сентября 2021</span>
+                <h3 class="article__header">Жемчуг: 7 малоизвестных фактов о культовом украшении</h3>
+            </a>
+
+            <a href="#" class="article">
+                <img src="images/articles/article4.png" alt="articleImg" class="article__img">
+                <span class="article__data">21 сентября 2021</span>
+                <h3 class="article__header">Как отличить золото от подделки: 10 практических советов</h3>
+            </a>
+        </div>
+    </section>
+</main>
+
+<script src="scripts/index.js"></script>
+<script src="scripts/render.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous"></script>
+<script src="scripts/owlCarousel/dist/owl.carousel.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+<script src="scripts/timer.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            items: 1,
+            nav: true,
+            navText: [`<img src="images/arrow.svg" alt="arrow">`, `<img src="images/arrow.svg" alt="arrow">`],
+            smartSpeed: 1000
+        });
+    });
+</script>
+</body>
+</html>

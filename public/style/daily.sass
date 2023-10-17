@@ -1,0 +1,424 @@
+@import "variables"
+.daily
+  margin-top: 120px
+.daily__header
+  display: flex
+  justify-content: space-between
+  h2
+    font-family: 'Prata'
+    font-style: normal
+    font-weight: 400
+    font-size: 40px
+    line-height: 100%
+    color: $mainColor
+
+.daily__bottom
+  margin-top: 40px
+  display: flex
+.daily__left
+  position: relative
+  margin-right: 100px
+  min-width: 420px
+  img
+    max-width: 550px
+    width: 100%
+    height: auto
+.daily__icons
+  display: flex
+  position: absolute
+  top: 20px
+  left: 20px
+  span
+    margin-right: 4px
+    &:last-child
+      margin-right: 0
+.daily__nav_wrapper
+  position: absolute
+  top: calc(50% - 5px)
+  max-width: 100%
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding: 0 15px
+.daily__nav
+  width: 10px
+  height: 10px
+  border-right: 2px solid $mainColor
+  border-bottom: 2px solid $mainColor
+  cursor: pointer
+  &_next
+    transform: rotate(-45deg)
+  &_prev
+    transform: rotate(135deg)
+
+.daily__right
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+.daily__stars
+  display: flex
+  align-items: flex-end
+.daily__star
+  max-width: 17px
+  width: 100%
+  height: auto
+  margin-right: 6px
+  &:last-of-type
+    margin-right: 10px
+.daily__grade
+  font-weight: 400
+  font-size: 14px
+  line-height: 100%
+  color: $mainColor
+
+.daily__name
+  margin-top: 24px
+  font-family: 'Prata'
+  font-weight: 400
+  font-size: 32px
+  line-height: 100%
+  color: $mainColor
+
+.daily__article
+  margin-top: 20px
+  font-weight: 400
+  font-size: 14px
+  line-height: 100%
+  color: #8F8F8F
+
+.daily__info
+  display: flex
+  align-items: flex-end
+  padding: 20px 0
+  border-bottom: 1px solid #F0F0F0
+  max-width: 100%
+  width: 100%
+.daily__price
+  display: flex
+  align-items: flex-end
+  margin-right: 36px
+  &_new
+    font-weight: 600
+    font-size: 20px
+    line-height: 100%
+    color: $mainColor
+    margin-right: 16px
+  &_old
+    font-weight: 400
+    font-size: 16px
+    line-height: 100%
+    text-decoration-line: line-through
+    color: #8F8F8F
+    margin-right: 24px
+  &_disc
+    background: #E24B33
+    border-radius: 15px
+    font-weight: 500
+    font-size: 13px
+    line-height: 100%
+    color: #FFFFFF
+    padding: 4px 8px
+
+.daily__timer
+  padding: 15px
+  background-color: #F5F5F5
+  display: flex
+  align-items: center
+  font-weight: 300
+  font-size: 11px
+  line-height: 100%
+  text-align: center
+  color: $mainColor
+.countdown__item
+  display: flex
+  flex-direction: column
+  width: 52px
+  padding: 6px 0
+  background-color: #fff
+  border: 1px solid #D0D0D0
+  span
+    margin-bottom: 5px
+    font-weight: 700
+    font-size: 16px
+.cocountdown__item
+  display: flex
+  flex-direction: column
+  .dot
+    width: 2px
+    height: 2px
+    background-color: $mainColor
+    border-radius: 50%
+    margin: 0 10px
+    &:last-of-type
+      margin-top: 4px
+
+
+.daily__color
+  margin-top: 30px
+  &_container
+    display: flex
+    margin-top: 16px
+  &_text
+    font-weight: 600
+    font-size: 12px
+    line-height: 100%
+    text-transform: uppercase
+    color: $mainColor
+  &_unit
+    width: 29px
+    height: 29px
+    border: 4px solid #fff
+    outline: 1px solid #DADADA
+    border-radius: 50%
+    margin-right: 8px
+    cursor: pointer
+    &:hover
+      outline: 1px solid $mainColor
+    &:hover + .disabled
+      cursor: auto
+      outline: 1px solid #DADADA
+    &:last-of-type
+      margin-right: 0
+    &.active
+      outline: 1px solid $mainColor
+  &_gray
+    background-color: #D9D9D9
+  &_gold
+    background-color: #F1CB7E
+  &_orange
+    background-color: #EA8C48
+  &_green
+    background-color: #A7E492
+
+
+.daily__size
+  margin-top: 30px
+  &_text
+    font-weight: 600
+    font-size: 12px
+    line-height: 100%
+    text-transform: uppercase
+    color: $mainColor
+    margin-right: 8px
+  &_container
+    display: flex
+    margin-top: 14px
+  &_span
+    width: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 10px
+    font-weight: 400
+    font-size: 14px
+    line-height: 100%
+    text-align: center
+    text-transform: uppercase
+    color: $mainColor
+    border: 1px solid #DADADA
+    margin-right: 8px
+    &:last-child
+      margin-right: 0
+    &:hover
+      border: 1px solid $mainColor
+      cursor: pointer
+    &.active
+      background-color: $mainColor
+      color: white
+
+.daily__question
+  display: inline-flex
+  position: relative
+  &_span
+    width: 18px
+    height: 18px
+    font-weight: 500
+    font-size: 12px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    color: $mainColor
+    background-color: #F0F0F0
+    cursor: pointer
+    &:hover
+      background-color: #D3D3D3
+  &_span:hover + .daily__question_text
+    display: block
+  &_text
+    width: 270px
+    font-weight: 400
+    font-size: 14px
+    line-height: 140%
+    color: $mainColor
+    padding: 25px
+    background-color: #fff
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1)
+    position: absolute
+    bottom: calc(-100% + 50px)
+    right: calc(50% - 135px)
+    display: none
+    &:after
+      content: ''
+      position: absolute
+      width: 8px
+      height: 8px
+      background-color: #fff
+      bottom: -4px
+      right: calc(50% - 4px)
+      transform: rotate(45deg)
+
+.daily__buttons_container
+  margin-top: 40px
+  display: flex
+  margin-right: 40px
+  max-width: 400px
+.daily__buttons
+  margin-right: 40px
+  & .pressed
+    background-color: black
+    &:hover
+      background-color: black
+.daily__button
+  max-width: 100%
+  width: 400px
+  padding: 21px
+  font-weight: 500
+  font-size: 14px
+  line-height: 100%
+  text-align: center
+  text-transform: uppercase
+  cursor: pointer
+  &_toCart
+    background-color: $mainColor
+    color: #FFFFFF
+    &:hover
+      background-color: #505050
+  &_buy
+    margin-top: 10px
+    color: $mainColor
+    border: 1px solid $mainColor
+    &:hover
+      background-color: $mainColor
+      color: #FFFFFF
+
+.daily__icons_right
+  display: flex
+  flex-direction: column
+.daily__icon
+  display: flex
+  align-items: center
+  margin-top: 20px
+  &:first-of-type
+    margin-top: 0
+  &_img
+    margin-right: 10px
+    width: 20px
+    height: 18px
+    opacity: .5
+  a
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    color: $mainColor
+    img
+      width: 20px
+      opacity: 1
+    &:hover img
+      opacity: 1
+    &:hover
+      color: #979797
+  .clicked
+    &:hover
+      color: $mainColor
+
+@media screen and (max-width: 1280px)
+  .daily
+    margin-top: 60px
+    &__left
+      display: flex
+      margin-right: 10px
+    &__img
+      align-self: center
+    &__buttons
+      margin-right: 15px
+    &__button
+      width: 320px
+    &__size
+      &_container
+        margin-top: 4px
+        flex-wrap: wrap
+        span
+          margin-top: 10px
+
+@media screen and (max-width: 980px)
+  .daily
+    margin-top: 40px
+    &__bottom
+      flex-wrap: wrap
+    &__left
+      margin: 0
+      max-width: 100%
+      width: 100%
+      justify-content: center
+    &__right
+      width: 100%
+    &__info
+      justify-content: space-between
+    &__buttons
+      margin-right: 10px
+      &_container
+        width: 100%
+        max-width: 100%
+        display: flex
+        justify-content: space-between
+    &__button
+      width: 450px
+    &__question
+      &_text
+        left: 4px
+        &:after
+          left: 2px
+
+@media screen and (max-width: 640px)
+  .daily
+    margin-top: 20px
+    &__header
+      flex-wrap: wrap
+      h2
+        width: 100%
+    &__header h2, &__name
+      font-size: 25px
+    &__arrows
+      justify-content: space-between
+      width: 100%
+      span:first-child
+        margin: 0
+    &__left
+      max-width: 100%
+      width: 100%
+      min-width: auto
+      img
+        max-width: 300px
+        width: 100%
+        height: auto
+    &__bottom
+      margin-top: 20px
+    &__info
+      flex-wrap: wrap
+    &__price
+      margin-right: 0
+      flex-wrap: wrap
+    &__timer
+      margin: 20px auto 0
+    &__color
+      margin-top: 20px
+      max-width: 100%
+      width: 100%
+    &__size
+      margin-top: 20px
+    &__buttons_container
+      margin-top: 20px
+    &__button
+      max-width: 100%
+      width: 100%

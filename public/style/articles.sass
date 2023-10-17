@@ -1,0 +1,87 @@
+@import "variables"
+.articles
+  margin-top: 130px
+  &__top
+    display: flex
+    justify-content: space-between
+  &__header
+    font-family: 'Prata'
+    font-style: normal
+    font-weight: 400
+    font-size: 40px
+    line-height: 100%
+    color: $mainColor
+  &__readAll
+    font-weight: 500
+    font-size: 14px
+    line-height: 100%
+    text-transform: uppercase
+    color: $mainColor
+    display: flex
+    align-items: center
+    &:hover
+      opacity: .5
+  &__arrow
+    width: 26px
+    height: 2px
+    background-color: black
+    position: relative
+    display: inline-block
+    margin-left: 12px
+    &:after
+      content: ''
+      position: absolute
+      width: 10px
+      height: 10px
+      right: 2px
+      border-bottom: 2px solid #000
+      border-right: 2px solid #000
+      transform: rotate(-45deg)
+      top: -5px
+  &__container
+    margin-top: 40px
+    display: grid
+    grid-column-gap: 20px
+    grid-template-columns: repeat(4, 1fr)
+.article
+  max-width: 312px
+  width: 100%
+  &__img
+    max-width: 100%
+    width: 100%
+    height: auto
+  &__data
+    font-weight: 400
+    font-size: 14px
+    line-height: 100%
+    color: #8F8F8F
+    margin-top: 20px
+    display: block
+  &__header
+    font-weight: 500
+    font-size: 16px
+    line-height: 100%
+    color: $mainColor
+    margin-top: 10px
+
+@media screen and (max-width: 1280px)
+  .articles
+    margin-top: 60px
+
+@media screen and (max-width: 980px)
+  .articles
+    margin-top: 40px
+
+@media screen and (max-width: 640px)
+  .articles
+    margin-top: 20px
+    &__container
+      margin-top: 20px
+      grid-column-gap: 20px
+      grid-row-gap: 20px
+      grid-template-columns: 1fr 1fr
+    &__header
+      font-size: 25px
+  .article
+    &__data
+      margin-top: 10px
